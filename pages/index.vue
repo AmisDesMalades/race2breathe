@@ -7,11 +7,15 @@
       </h1>
       <h2 class="subtitle">
         Logistic platform linking hospital PPE demands with local 3d printing
-        volunteer production.
+        production for the COVID-19 crisis.
+        <br />
       </h2>
       <div class="links">
-        <b-button variant="primary" size="lg">Volunteer 3D</b-button>
-        <b-button variant="info" size="lg">Hospital</b-button>
+        <b-link href="./simulation">
+          <b-button variant="info" size="lg">Simulation</b-button>
+        </b-link>
+        <!-- <b-button variant="primary" size="lg">Volunteer 3D</b-button> -->
+        <!-- <b-button variant="info" size="lg">Hospital</b-button> -->
       </div>
     </div>
   </div>

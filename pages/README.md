@@ -1,6 +1,11 @@
-# PAGES
+# RACE2BREATHE
 
-This directory contains your Application Views and Routes.
-The framework reads all the `*.vue` files inside this directory and creates the router of your application.
+Race 2 Breathe is a logistic platform linking hospital demands with local 3d printing capabilities for the COVID-19 crisis.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/routing).
+## Technology stack
+
+- Back-end: RoR 6 API
+- Front-end: Nuxt, vueJS and Twitter Bootstrap
+- Hosting: Heroku
+- Style: SCSS
+- Typescript
