@@ -141,6 +141,9 @@
                   1 x Feuille de plastique transparent rigide 0.3mm
                 </li>
                 <li>
+                  1 x Revêtement silicone
+                </li>
+                <li>
                   1 x Bande élastique
                 </li>
                 <li>
@@ -173,6 +176,22 @@
                 <b-form-input
                   id="prix_bande"
                   v-model="prix_bande"
+                  size="lg"
+                  type="number"
+                  step=".01"
+                ></b-form-input>
+              </b-form-group>
+
+              <b-form-group
+                label-cols="4"
+                label-cols-lg="4"
+                label-size="lg"
+                label="Prix par revêtement silicone"
+                label-for="input-lg"
+              >
+                <b-form-input
+                  id="prix_silicone"
+                  v-model="prix_silicone"
                   size="lg"
                   type="number"
                   step=".01"
@@ -272,15 +291,17 @@ export default Vue.extend({
       capacite_journaliere: 8,
       prix_feuille: 0.1,
       prix_bande: 0.2,
+      prix_silicone: 0.5,
       prix_emballage: 0,
       prix_autres: 0,
-      show: true,
 
       total_imprimantes: 0,
       prix_par_unite_3d: 0,
       prix_par_unite_total: 0,
       capacite_journaliere_totale: 0,
-      prix_total: 0
+      prix_total: 0,
+
+      show: true
     }
   },
   methods: {
@@ -297,6 +318,7 @@ export default Vue.extend({
       this.prix_par_unite_total =
         this.prix_par_unite_3d +
         this.prix_feuille +
+        this.prix_silicone +
         this.prix_bande +
         this.prix_emballage
       this.capacite_journaliere_totale =
@@ -308,13 +330,14 @@ export default Vue.extend({
     onReset(evt: any) {
       evt.preventDefault()
       // Reset our form values
-      this.quantite_imprimante = 1
+      this.quantite_imprimante = 100
       this.prix_imprimante = 750
-      this.poids_visiere = 50
+      this.poids_visiere = 32
       this.prix_plastique = 0.02
-      this.capacite_journaliere = 8
+      this.capacite_journaliere = 6
       this.prix_feuille = 0.1
       this.prix_bande = 0.2
+      this.prix_silicone = 0.5
       this.prix_emballage = 0
       this.prix_autres = 0
       // Trick to reset/clear native browser form validation state
